@@ -1,0 +1,29 @@
+# All CLion .idea folder content
+\.idea
+
+# All Visual Studio .vs folder content
+\.vs
+
+# All VS Code .vscode folder content
+\.vscode
+
+# Ignore the build folders.
+\build
+\debug
+\release
+
+# All .ninja .ninja_* ...
+*.ninja*
+
+*.exe
+
+CMakeCache.txt
+# All generated cmake installation scripts
+*.cmake
+CMakeFiles/
+
+# Temporary stuff
+*temporary*
+*.log
+*.swp
+
