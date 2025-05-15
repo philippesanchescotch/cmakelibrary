@@ -1,4 +1,5 @@
 # "MSVC" comparison will fail if quoted variables get expanded.
+cmake_policy(VERSION 3.31.6)
 cmake_policy(SET CMP0054 NEW)
 
 function(SetupCMake)
