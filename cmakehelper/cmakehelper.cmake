@@ -1,7 +1,7 @@
 # Make sure we have CMP0011 NEW to avoid a warning from CMP0054.
 # We want the policies to not affect the includer.
 # cmake_policy(VERSION 3.31.6)
-cmake_policy(SET CMP0011 NEW)
+# cmake_policy(SET CMP0011 NEW)
 # "MSVC" comparison will fail if quoted variables get expanded.
 cmake_policy(SET CMP0054 NEW)
 
