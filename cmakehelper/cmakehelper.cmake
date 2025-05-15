@@ -47,12 +47,22 @@ function(SetupCompilerFlags)
     endif()
 endfunction()
 
-function(SetupAdditionalLibs)
+function(SetupAdditionalLibs argProjectName)
+    # Check for use case SetupAdditionalLibs("")
+    if (argProjectName STREQUAL "")
+        message( FATAL_ERROR "Please specify a valid 'argProjectName' argument." )
+    endif()
+    # Check for use case
+    # set(patate "")
+    # SetupAdditionalLibs(patate)
+    if (${argProjectName} STREQUAL "")
+        message( FATAL_ERROR "Please specify a valid 'argProjectName' argument." )
+    endif()
+
     if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-        message(STATUS "Adding stdc++exp to linker options (-l)")
-        target_link_libraries(${PROJECT_NAME} stdc++exp)
+        message(STATUS "Adding stdc++exp to linker options (-l) for project: ${argProjectName}")
+        target_link_libraries(${argProjectName} stdc++exp)
     endif()
 endfunction()
-
 
 
